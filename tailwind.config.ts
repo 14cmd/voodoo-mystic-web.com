@@ -61,7 +61,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Voodoo Mystic specific colors
+				'mystical-dark': 'hsl(var(--mystical-dark))',
+				'blood-red': 'hsl(var(--blood-red))',
+				'ancient-gold': 'hsl(var(--ancient-gold))',
+				'mystical-purple': 'hsl(var(--mystical-purple))',
+				'bone-white': 'hsl(var(--bone-white))',
+				'emerald-magic': 'hsl(var(--emerald-magic))'
+			},
+			fontFamily: {
+				'cinzel': ['Cinzel', 'serif'],
+				'garamond': ['Garamond', 'serif'],
+				'mystical': ['Cinzel', 'serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

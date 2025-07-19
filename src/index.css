@@ -2,41 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Voodoo Mystic Design System - Dark mystical theme with rich symbolism
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core mystical palette */
+    --background: 0 0% 5%;
+    --foreground: 40 20% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 8%;
+    --card-foreground: 40 20% 85%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 40 20% 85%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Mystical primary - Deep ritualistic red */
+    --primary: 0 85% 35%;
+    --primary-foreground: 40 20% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Ancient gold accents */
+    --secondary: 45 85% 50%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted mystical tones */
+    --muted: 0 0% 15%;
+    --muted-foreground: 40 10% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Mystical purple accent */
+    --accent: 270 60% 25%;
+    --accent-foreground: 40 20% 95%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 40 20% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 85% 35%;
 
     --radius: 0.5rem;
+
+    /* Voodoo-specific design tokens */
+    --mystical-dark: 0 0% 8%;
+    --blood-red: 0 85% 35%;
+    --ancient-gold: 45 85% 50%;
+    --mystical-purple: 270 60% 25%;
+    --bone-white: 40 20% 90%;
+    --emerald-magic: 160 60% 40%;
+    
+    /* Gradients for mystical effects */
+    --gradient-mystical: linear-gradient(135deg, hsl(var(--mystical-dark)), hsl(var(--blood-red)));
+    --gradient-ritual: linear-gradient(180deg, hsl(var(--background)), hsl(var(--mystical-purple)));
+    --gradient-ancient: linear-gradient(45deg, hsl(var(--ancient-gold)), hsl(var(--blood-red)));
+    
+    /* Shadows with mystical glow */
+    --shadow-mystical: 0 10px 30px -10px hsl(var(--blood-red) / 0.4);
+    --shadow-ritual: 0 0 40px hsl(var(--mystical-purple) / 0.3);
+    --shadow-ancient: 0 5px 20px hsl(var(--ancient-gold) / 0.2);
+
+    /* Animations */
+    --transition-mystical: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-ritual: transform 0.3s ease-out;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +128,69 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Garamond', serif;
+  }
+}
+
+@layer components {
+  /* Mystical button variants */
+  .btn-ritual {
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground;
+    @apply hover:shadow-[0_0_20px_theme(colors.primary/40)];
+    @apply transition-all duration-500 ease-out;
+    @apply hover:scale-105 transform;
+  }
+
+  .btn-ancient {
+    @apply bg-secondary text-secondary-foreground;
+    @apply hover:shadow-[0_0_15px_theme(colors.secondary/50)];
+    @apply transition-all duration-300;
+  }
+
+  /* Mystical card effects */
+  .card-mystical {
+    @apply bg-card border border-border rounded-lg p-6;
+    @apply hover:shadow-[0_10px_30px_theme(colors.primary/20)];
+    @apply transition-all duration-500;
+    @apply hover:-translate-y-1;
+    background: linear-gradient(135deg, hsl(var(--card)), hsl(var(--mystical-dark)));
+  }
+
+  /* Social media mystical icons */
+  .social-mystical {
+    @apply w-10 h-10 rounded-full flex items-center justify-center;
+    @apply bg-muted border border-border text-muted-foreground;
+    @apply hover:bg-primary hover:text-primary-foreground;
+    @apply hover:shadow-[0_0_15px_theme(colors.primary/60)];
+    @apply transition-all duration-400 transform hover:scale-110;
+  }
+
+  /* Mystical text glow effect */
+  .text-mystical {
+    @apply text-transparent bg-clip-text;
+    background: linear-gradient(45deg, hsl(var(--ancient-gold)), hsl(var(--blood-red)));
+  }
+
+  /* Ritual divider */
+  .divider-ritual {
+    @apply h-px bg-gradient-to-r from-transparent via-primary to-transparent my-8;
+  }
+
+  /* Animated mystical border */
+  .border-mystical {
+    @apply relative overflow-hidden;
+  }
+  
+  .border-mystical::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent;
+    @apply opacity-0 transition-opacity duration-500;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    padding: 2px;
+  }
+  
+  .border-mystical:hover::before {
+    @apply opacity-100;
   }
 }

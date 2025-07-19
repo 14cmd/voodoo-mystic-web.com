@@ -23,7 +23,7 @@ const Header = () => {
               <span className="text-primary-foreground font-mystical text-lg">☩</span>
             </div>
             <span className="font-cinzel font-bold text-xl text-mystical">
-              Voodoo Mystic
+              Majesté Koffi Tô-Non
             </span>
           </div>
 

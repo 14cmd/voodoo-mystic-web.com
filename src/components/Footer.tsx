@@ -50,7 +50,7 @@ const Footer = () => {
                 <span className="text-primary-foreground font-mystical text-xl">☩</span>
               </div>
               <span className="font-cinzel font-bold text-2xl text-mystical">
-                Voodoo Mystic
+                Majesté Koffi Tô-Non
               </span>
             </div>
             <p className="font-garamond text-muted-foreground mb-6 max-w-md leading-relaxed">
@@ -203,7 +203,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 text-center md:text-left">
           <p className="font-garamond text-muted-foreground text-sm mb-4 md:mb-0">
-            © 2024 Voodoo Mystic. Tous droits réservés aux esprits ancestraux.
+            © 2024 Majesté Koffi Tô-Non. Tous droits réservés aux esprits ancestraux.
           </p>
           <div className="flex items-center space-x-6 text-sm font-garamond text-muted-foreground">
             <a href="#" className="hover:text-secondary transition-colors">

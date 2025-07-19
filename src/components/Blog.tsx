@@ -1,5 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import blogImage from '@/assets/blog-professional.jpg';
+import advisorImage from '@/assets/advisor-professional.jpg';
 import { Badge } from '@/components/ui/badge';
 
 const Blog = () => {

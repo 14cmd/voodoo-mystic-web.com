@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import boutiqueImage from '@/assets/boutique-products.jpg';
+import boutiqueImage from '@/assets/boutique-professional.jpg';
 
 const Boutique = () => {
   const products = [

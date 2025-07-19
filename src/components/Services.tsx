@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import servicesImage from '@/assets/services-mystical.jpg';
+import servicesImage from '@/assets/services-professional.jpg';
 
 const Services = () => {
   const services = [

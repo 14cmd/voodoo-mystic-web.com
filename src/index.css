@@ -162,7 +162,7 @@ All colors MUST be HSL.
     @apply bg-muted border border-border text-muted-foreground;
     @apply hover:bg-primary hover:text-primary-foreground;
     @apply hover:shadow-[0_0_15px_theme(colors.primary/60)];
-    @apply transition-all duration-400 transform hover:scale-110;
+    @apply transition-all duration-300 transform hover:scale-110;
   }
 
   /* Mystical text glow effect */

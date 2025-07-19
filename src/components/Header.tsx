@@ -41,8 +41,15 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Contact & CTA */}
+          <div className="hidden md:flex items-center space-x-4">
+            <a 
+              href="tel:+22999062361"
+              className="flex items-center space-x-2 text-ancient-gold hover:text-mystical transition-colors font-garamond"
+            >
+              <span>📞</span>
+              <span className="text-sm">+229 99 06 23 61</span>
+            </a>
             <Button className="btn-ritual font-garamond">
               Consultation Rapide
             </Button>
@@ -71,9 +78,18 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button className="btn-ritual w-full mt-4 font-garamond">
-                Consultation Rapide
-              </Button>
+              <div className="mt-4 space-y-3">
+                <a 
+                  href="tel:+22999062361"
+                  className="flex items-center justify-center space-x-2 text-ancient-gold hover:text-mystical transition-colors font-garamond py-2"
+                >
+                  <span>📞</span>
+                  <span>+229 99 06 23 61</span>
+                </a>
+                <Button className="btn-ritual w-full font-garamond">
+                  Consultation Rapide
+                </Button>
+              </div>
             </nav>
           </div>
         )}

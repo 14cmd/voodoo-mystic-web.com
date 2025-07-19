@@ -123,6 +123,12 @@ const Footer = () => {
               </h3>
               <div className="space-y-4 font-garamond text-muted-foreground">
                 <p className="flex items-center space-x-3">
+                  <span className="text-ancient-gold">📞</span>
+                  <a href="tel:+22999062361" className="hover:text-secondary transition-colors">
+                    +229 99 06 23 61
+                  </a>
+                </p>
+                <p className="flex items-center space-x-3">
                   <span className="text-ancient-gold">🕯️</span>
                   <span>Consultations disponibles 7j/7</span>
                 </p>
@@ -145,7 +151,14 @@ const Footer = () => {
               <div className="space-y-3">
                 <Button 
                   className="btn-ritual w-full font-garamond text-left justify-start"
-                  onClick={() => window.open('https://wa.me/message/CKRIESHPMWFQE1', '_blank')}
+                  onClick={() => window.open('tel:+22999062361')}
+                >
+                  <span className="mr-3">📞</span>
+                  Appeler : +229 99 06 23 61
+                </Button>
+                <Button 
+                  className="btn-ritual w-full font-garamond text-left justify-start"
+                  onClick={() => window.open('https://wa.me/22999062361', '_blank')}
                 >
                   <span className="mr-3">📱</span>
                   WhatsApp - Contact Immédiat

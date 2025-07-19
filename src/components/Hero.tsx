@@ -62,10 +62,17 @@ const Hero = () => {
           </blockquote>
         </div>
 
-        {/* Floating Social Media Icons */}
+        {/* Floating Contact & Social Media Icons */}
         <div className="absolute bottom-8 right-8 flex flex-col space-y-3">
           <a
-            href="https://wa.me/message/CKRIESHPMWFQE1"
+            href="tel:+22999062361"
+            className="social-mystical"
+            title="Appeler maintenant"
+          >
+            <span className="text-lg">📞</span>
+          </a>
+          <a
+            href="https://wa.me/22999062361"
             target="_blank"
             rel="noopener noreferrer"
             className="social-mystical"

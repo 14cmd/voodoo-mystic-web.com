@@ -18,6 +18,14 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
+          {/* Presentation Name */}
+          <div className="mb-6">
+            <h2 className="font-cinzel text-2xl md:text-3xl text-ancient-gold font-bold tracking-wide">
+              MAJESTÉ KOFFI TÔ-NON
+            </h2>
+            <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-ancient-gold to-transparent mx-auto mt-2"></div>
+          </div>
+
           {/* Main Heading */}
           <h1 className="font-cinzel text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
             <span className="text-mystical bg-gradient-to-r from-ancient-gold via-blood-red to-mystical-purple bg-clip-text text-transparent">

@@ -129,6 +129,12 @@ const Footer = () => {
                   </a>
                 </p>
                 <p className="flex items-center space-x-3">
+                  <span className="text-ancient-gold">📧</span>
+                  <a href="mailto:consultationvoodomystic@gmail.com" className="hover:text-secondary transition-colors">
+                    consultationvoodomystic@gmail.com
+                  </a>
+                </p>
+                <p className="flex items-center space-x-3">
                   <span className="text-ancient-gold">🕯️</span>
                   <span>Consultations disponibles 7j/7</span>
                 </p>
@@ -166,9 +172,10 @@ const Footer = () => {
                 <Button 
                   variant="outline" 
                   className="w-full font-garamond text-left justify-start border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
+                  onClick={() => window.open('mailto:consultationvoodomystic@gmail.com')}
                 >
                   <span className="mr-3">📧</span>
-                  consultation@voodomystic.com
+                  consultationvoodomystic@gmail.com
                 </Button>
               </div>
             </div>

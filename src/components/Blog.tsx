@@ -1,8 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import blogImage from '@/assets/blog-professional.jpg';
-import advisorImage from '@/assets/advisor-professional.jpg';
 import { Badge } from '@/components/ui/badge';
+import originsImage from '@/assets/article-origins.jpg';
+import loasImage from '@/assets/article-loas.jpg';
+import protectionImage from '@/assets/article-protection.jpg';
+import veveImage from '@/assets/article-veve.jpg';
+import purificationImage from '@/assets/article-purification.jpg';
+import cowrieImage from '@/assets/article-cowrie.jpg';
 
 const Blog = () => {
   const articles = [
@@ -12,7 +16,7 @@ const Blog = () => {
       category: 'Histoire',
       readTime: '8 min',
       date: '15 Nov 2024',
-      image: '📜'
+      image: originsImage
     },
     {
       title: 'Comprendre les Loas : Les Esprits Vaudou',
@@ -20,7 +24,7 @@ const Blog = () => {
       category: 'Spiritualité',
       readTime: '12 min',
       date: '10 Nov 2024',
-      image: '👻'
+      image: loasImage
     },
     {
       title: 'Rituel de Protection : Votre Premier Pas',
@@ -28,7 +32,7 @@ const Blog = () => {
       category: 'Pratique',
       readTime: '6 min',
       date: '5 Nov 2024',
-      image: '🛡️'
+      image: protectionImage
     },
     {
       title: 'Les Symboles Veve : Langage Sacré',
@@ -36,7 +40,7 @@ const Blog = () => {
       category: 'Symbolisme',
       readTime: '10 min',
       date: '1 Nov 2024',
-      image: '⚡'
+      image: veveImage
     },
     {
       title: 'Purification de la Maison : Guide Complet',
@@ -44,7 +48,7 @@ const Blog = () => {
       category: 'Pratique',
       readTime: '15 min',
       date: '28 Oct 2024',
-      image: '🏠'
+      image: purificationImage
     },
     {
       title: 'La Divination par les Cauris',
@@ -52,7 +56,7 @@ const Blog = () => {
       category: 'Divination',
       readTime: '9 min',
       date: '25 Oct 2024',
-      image: '🐚'
+      image: cowrieImage
     }
   ];
 
@@ -90,10 +94,13 @@ const Blog = () => {
         <div className="mb-16">
           <Card className="card-mystical border-mystical max-w-4xl mx-auto overflow-hidden">
             <div className="grid md:grid-cols-2 gap-0">
-              <div className="p-8 flex items-center justify-center bg-gradient-to-br from-mystical-purple to-blood-red">
-                <div className="text-8xl text-ancient-gold">
-                  📜
-                </div>
+              <div className="relative overflow-hidden">
+                <img 
+                  src={articles[0].image} 
+                  alt={articles[0].title}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-mystical-purple/60 to-blood-red/60"></div>
               </div>
               <div className="p-8">
                 <Badge className="mb-4 bg-secondary text-secondary-foreground">
@@ -122,16 +129,20 @@ const Blog = () => {
         {/* Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.slice(1).map((article, index) => (
-            <Card key={index} className="card-mystical border-mystical group">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
-                    {article.image}
-                  </div>
+            <Card key={index} className="card-mystical border-mystical group overflow-hidden">
+              <div className="relative">
+                <img 
+                  src={article.image} 
+                  alt={article.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute top-4 right-4">
                   <Badge variant="secondary" className="font-garamond">
                     {article.category}
                   </Badge>
                 </div>
+              </div>
+              <CardHeader>
                 <CardTitle className="font-cinzel text-lg text-bone-white group-hover:text-ancient-gold transition-colors">
                   {article.title}
                 </CardTitle>
